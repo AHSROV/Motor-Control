@@ -1,1 +1,2 @@
 C:\danielhep_workspace\Ranger\motor-control\motor control\motor controlContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor controlContent\obj\x86\Debug\motor controlContent.contentprojResolveAssemblyReference.cache

@@ -7,8 +7,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\MainText.xnb</Output>
-      <Time>2014-06-03T16:49:10-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\MainText.xnb</Output>
+      <Time>2015-03-31T16:28:39.3605046-07:00</Time>
     </Item>
     <Item>
       <Source>BarGraphFont.spritefont</Source>
@@ -16,8 +16,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\BarGraphFont.xnb</Output>
-      <Time>2014-06-03T16:49:10-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\BarGraphFont.xnb</Output>
+      <Time>2015-03-31T16:28:39.3575025-07:00</Time>
     </Item>
     <Item>
       <Source>BarGraph.PNG</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\BarGraphFull.xnb</Output>
-      <Time>2014-06-03T16:49:10-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\BarGraphFull.xnb</Output>
+      <Time>2015-03-31T16:28:39.3545072-07:00</Time>
     </Item>
     <Item>
       <Source>Yellow Line not transparent.PNG</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\Yellow Line not transparent.xnb</Output>
-      <Time>2014-06-03T16:49:12-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\Yellow Line not transparent.xnb</Output>
+      <Time>2015-03-31T16:28:39.4065372-07:00</Time>
     </Item>
     <Item>
       <Source>Yellow Line.PNG</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\Yellow Line.xnb</Output>
-      <Time>2014-06-03T16:49:12-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\Yellow Line.xnb</Output>
+      <Time>2015-03-31T16:28:39.4075571-07:00</Time>
     </Item>
     <Item>
       <Source>SingleBarGraph.PNG</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\BarGraph.xnb</Output>
-      <Time>2014-06-03T16:49:12-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\BarGraph.xnb</Output>
+      <Time>2015-03-31T16:28:39.4015358-07:00</Time>
     </Item>
     <Item>
       <Source>Bar.jpg</Source>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\Bar.xnb</Output>
-      <Time>2014-06-03T16:49:10-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\Bar.xnb</Output>
+      <Time>2015-03-31T16:28:39.3534996-07:00</Time>
     </Item>
     <Item>
       <Source>ROV001.jpg</Source>
@@ -70,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\ROV001.xnb</Output>
-      <Time>2014-06-03T16:49:10-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\ROV001.xnb</Output>
+      <Time>2015-03-31T16:28:39.3685103-07:00</Time>
     </Item>
     <Item>
       <Source>ROV000.jpg</Source>
@@ -79,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\ROV000.xnb</Output>
-      <Time>2014-06-03T16:49:10-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\ROV000.xnb</Output>
+      <Time>2015-03-31T16:28:39.3655081-07:00</Time>
     </Item>
     <Item>
       <Source>Background.jpg</Source>
@@ -88,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\Background.xnb</Output>
-      <Time>2014-06-03T16:49:08-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\Background.xnb</Output>
+      <Time>2015-03-31T16:28:39.3484965-07:00</Time>
     </Item>
     <Item>
       <Source>ROV_ALL.jpg</Source>
@@ -97,8 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\ROV_ALL.xnb</Output>
-      <Time>2014-06-03T16:49:12-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\ROV_ALL.xnb</Output>
+      <Time>2015-03-31T16:28:39.4005334-07:00</Time>
     </Item>
     <Item>
       <Source>ROV002.jpg</Source>
@@ -106,8 +106,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\ROV002.xnb</Output>
-      <Time>2014-06-03T16:49:10-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\ROV002.xnb</Output>
+      <Time>2015-03-31T16:28:39.3735142-07:00</Time>
     </Item>
     <Item>
       <Source>ROV003.jpg</Source>
@@ -115,8 +115,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\ROV003.xnb</Output>
-      <Time>2014-06-03T16:49:10-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\ROV003.xnb</Output>
+      <Time>2015-03-31T16:28:39.3785178-07:00</Time>
     </Item>
     <Item>
       <Source>ROV004.jpg</Source>
@@ -124,8 +124,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\ROV004.xnb</Output>
-      <Time>2014-06-03T16:49:10-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\ROV004.xnb</Output>
+      <Time>2015-03-31T16:28:39.3835209-07:00</Time>
     </Item>
     <Item>
       <Source>ROV005.jpg</Source>
@@ -133,8 +133,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\ROV005.xnb</Output>
-      <Time>2014-06-03T16:49:12-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\ROV005.xnb</Output>
+      <Time>2015-03-31T16:28:39.387543-07:00</Time>
     </Item>
     <Item>
       <Source>ROV006.jpg</Source>
@@ -142,8 +142,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\ROV006.xnb</Output>
-      <Time>2014-06-03T16:49:12-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\ROV006.xnb</Output>
+      <Time>2015-03-31T16:28:39.3915266-07:00</Time>
     </Item>
     <Item>
       <Source>ROV007.jpg</Source>
@@ -151,8 +151,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\ROV007.xnb</Output>
-      <Time>2014-06-03T16:49:12-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\ROV007.xnb</Output>
+      <Time>2015-03-31T16:28:39.3955294-07:00</Time>
     </Item>
     <Item>
       <Source>tada.wav</Source>
@@ -160,8 +160,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\tada.xnb</Output>
-      <Time>2014-06-03T16:49:12-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\tada.xnb</Output>
+      <Time>2015-03-31T16:28:39.4315571-07:00</Time>
     </Item>
     <Item>
       <Source>Windows Ringin.wav</Source>
@@ -169,8 +169,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\Windows Ringin.xnb</Output>
-      <Time>2014-06-03T16:49:12-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\Windows Ringin.xnb</Output>
+      <Time>2015-03-31T16:28:39.4065372-07:00</Time>
     </Item>
     <Item>
       <Source>tos-redalert.wav</Source>
@@ -178,8 +178,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\tos-redalert.xnb</Output>
-      <Time>2014-06-03T16:49:12-07:00</Time>
+      <Output>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\tos-redalert.xnb</Output>
+      <Time>2015-03-31T16:28:39.4355578-07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -187,39 +187,39 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\danielhep_workspace\Ranger\motor-control\motor control\motor controlContent\</RootDirectory>
-      <LoggerRootDirectory>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\danielhep_workspace\Ranger\motor-control\motor control\motor controlContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\danielhep_workspace\Ranger\motor-control\motor control\motor control\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor controlContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor controlContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Daniel\Documents\GitHub\Motor-Control\motor control\motor control\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-07:00</Value>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-07:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
-        <Value>2010-08-23T13:41:18-07:00</Value>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-07:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-07:00</Value>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-07:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-07:00</Value>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-07:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-07:00</Value>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-07:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
-        <Value>2010-08-23T13:41:18-07:00</Value>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-07:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2013-11-11T00:20:45.515625-08:00</Value>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-03-31T16:28:23.0558383-07:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

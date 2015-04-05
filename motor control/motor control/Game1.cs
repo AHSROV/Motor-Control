@@ -216,12 +216,12 @@ namespace motor_control
 
             // set up for 2014 (incomplete) motor config
 
-            upFront.SetUp    (arduino, 5);
+            upFront.SetUp    (arduino, 2);
             upBack.SetUp     (arduino, 4);
             frontLeft.SetUp  (arduino, 0);
-            frontRight.SetUp (arduino, 1);
-            backLeft.SetUp   (arduino, 2);
-            backRight.SetUp  (arduino, 3);
+            frontRight.SetUp (arduino, 3);
+            backLeft.SetUp   (arduino, 5);
+            backRight.SetUp  (arduino, 1);
 
             leech.SetUp  (arduino, 3);
             stomper.SetUp(arduino, 1);
@@ -494,7 +494,7 @@ namespace motor_control
             }
 
             // Don't send Arduino updates unless the time has arrived
-            if (arduino.PongReceivedUp())
+           // if (arduino.PongReceivedUp())
             {
                 //set the motor speed equal to the y value
                 frontLeft.SetPercentSpeed(desiredSpeeds.frontLeft);
