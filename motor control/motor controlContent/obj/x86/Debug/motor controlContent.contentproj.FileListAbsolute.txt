@@ -1,1 +1,0 @@
-C:\danielhep_workspace\Ranger\motor-control\motor control\motor controlContent\obj\x86\Debug\ResolveAssemblyReference.cache
