@@ -28,8 +28,6 @@ namespace motor_control
             {
                 arduinoConnected = false;
             }
-
-            downMessageCountStopwatch.Start();
         }
 
         public string nameOfPort;
@@ -37,17 +35,8 @@ namespace motor_control
         private string lastCompleteString;
         private bool arduinoConnected;
 
-        private Stopwatch downMessageCountStopwatch = new Stopwatch();
-
-        public int messageDownCount = 0;
-
         public delegate void EmergecnyEventHandler(object sender, EventArgs e);
         public event EmergecnyEventHandler Emergency;
-
-        private int conductivitySensorValue;
-
-        private bool pongReceivedUp = true;
-        private bool pongReceivedDown = true;
 
         // This resets the entire connection to the Arduino not just the processor
         public void ResetConnection()
@@ -92,13 +81,6 @@ namespace motor_control
             port.DtrEnable = true;
         }
 
-        public int conductivitySenseValue
-        {
-            get
-            {
-                return conductivitySensorValue;
-            }
-        }
 
         // Returns whether the Arduino is connected or not
         public bool Connected
@@ -129,78 +111,13 @@ namespace motor_control
                     return;
                 }
                 lastCompleteString = newString;
-
-                if (lastCompleteString.Substring(0, 2) == "pu")
-                {
-                    pongReceivedUp = true;
-                }
-                else if (lastCompleteString.Substring(0, 2) == "pd")
-                {
-                    pongReceivedDown = true;
-                }
-                else if (lastCompleteString.Substring(0, 1) == "c")
-                {
-                    try
-                    {
-                        string lastFour = lastCompleteString.Substring(lastCompleteString.Length - (lastCompleteString.Length - 1));
-                        conductivitySensorValue = int.Parse(lastFour);
-                    }
-                    catch
-                    {
-                        conductivitySensorValue = 0;
-                    }
-                }
-                else if (lastCompleteString.Substring(0, 1) == ".")
-                {
-                    messageDownCount++;
-                    downMessageCountStopwatch.Restart();
-                }
-                else if (lastCompleteString.Substring(0, 1) == "!")
-                {
-                    messageDownCount++;
-                    downMessageCountStopwatch.Restart();
-
-                    EventArgs eE = new EventArgs();
-
-                    if (Emergency != null)
-                        Emergency(this, eE);
-                }
             }
             else
             {
                 Console.WriteLine("Deformed message received: " + newString);
                 return;
             }
-            if (lastCompleteString.Substring(0, 2) == "pu")
-                return;
             Console.WriteLine("Message received: " + lastCompleteString);
-        }
-
-        public void PingUp()
-        {
-            SendStringln("pu");
-            pongReceivedUp = false;
-        }
-
-        public void pingDown()
-        {
-            SendStringln("pd");
-            pongReceivedDown = false;
-        }
-
-        public bool PongReceivedUp()
-        {
-            return pongReceivedUp;
-        }
-
-        public int TimeSinceLastDownMessage()
-        {
-            return downMessageCountStopwatch.Elapsed.Seconds;
-        }
-
-        public bool PongReceivedDown()
-        {
-            return pongReceivedDown;
         }
 
     }
