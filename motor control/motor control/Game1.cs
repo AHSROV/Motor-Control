@@ -493,21 +493,17 @@ namespace motor_control
                 desiredSpeeds.backLeft   *= 0.8F;
             }
 
-            // Don't send Arduino updates unless the time has arrived
-            if (arduino.PongReceivedUp())
-            {
-                //set the motor speed equal to the y value
-                frontLeft.SetPercentSpeed(desiredSpeeds.frontLeft);
-                frontRight.SetPercentSpeed(desiredSpeeds.frontRight);
-                upBack.SetPercentSpeed(desiredSpeeds.upBack);
-                upFront.SetPercentSpeed(desiredSpeeds.upFront);
-                backRight.SetPercentSpeed(desiredSpeeds.backRight);
-                backLeft.SetPercentSpeed(desiredSpeeds.backLeft);
-                claw.SetState(desiredSpeeds.claw);
-                leech.SetState(desiredSpeeds.leech);
-                rack.SetState(desiredSpeeds.rack);
-                stomper.SetState(desiredSpeeds.stomper);
-            }
+            //set the motor speed equal to the y value
+            frontLeft.SetPercentSpeed(desiredSpeeds.frontLeft);
+            frontRight.SetPercentSpeed(desiredSpeeds.frontRight);
+            upBack.SetPercentSpeed(desiredSpeeds.upBack);
+            upFront.SetPercentSpeed(desiredSpeeds.upFront);
+            backRight.SetPercentSpeed(desiredSpeeds.backRight);
+            backLeft.SetPercentSpeed(desiredSpeeds.backLeft);
+            claw.SetState(desiredSpeeds.claw);
+            leech.SetState(desiredSpeeds.leech);
+            rack.SetState(desiredSpeeds.rack);
+            stomper.SetState(desiredSpeeds.stomper);
 
             // Mobin & Mebin: Update BarGraph
             const float slope = -CLAMP / 2.0f;
@@ -524,11 +520,6 @@ namespace motor_control
             lastPadState = padState;
             lastKeyState = keyState;
 
-            if (arduino.PongReceivedUp() || timeoutStopwatch.ElapsedMilliseconds > 1000)
-            {
-                arduino.PingUp();
-                timeoutStopwatch.Restart();
-            }
             float elapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (desiredSpeeds.frontLeft > 0.0 && desiredSpeeds.backRight > 0.0 && desiredSpeeds.frontRight < 0.0 && desiredSpeeds.backLeft < 0.0)
             {
@@ -760,39 +751,8 @@ namespace motor_control
                 Color rectangleColor;
                 if (arduino.Connected)
                 {
-                    CalibrationValue[] cbValues = { new CalibrationValue(600, 5000), new CalibrationValue(1023, 0) };
-                    MeasurementCalibration calibration = new MeasurementCalibration(cbValues);
-
-                    char mark = '\\';
-
-                    if (arduino.messageDownCount % 2 == 0)
-                    {
-                        mark = '/';
-                    }
-
-                    if (conductivitySensor.GetState())
-                    {
-                        if (lastPadState.Buttons.Start == ButtonState.Pressed)
-                        {
-                            message = String.Format("Conductivity Sensor Read: {0} Micro Siemens {1}", Math.Round(calibration.GetMeasurementFromReading(arduino.conductivitySenseValue), 0) / 2, mark);
-                        }
-                        else
-                        {
-                            message = String.Format("Conductivity Sensor Read: {0} Micro Siemens {1}", Math.Round(calibration.GetMeasurementFromReading(arduino.conductivitySenseValue), 0), mark);  
-                        }
-
-                        rectangleColor = Color.LightGreen;
-                    }
-                    else
-                    {
-                        message = String.Format("Conductivity Sensor Read: off {0}", mark);
-                        rectangleColor = Color.LightGray;
-                    }
-
-                    if (arduino.TimeSinceLastDownMessage() >= 2500)
-                    {
-                        rectangleColor = Color.Pink;
-                    }
+                    message = "Control Box Connected";
+                    rectangleColor = Color.Pink;
                 }
                 else
                 {

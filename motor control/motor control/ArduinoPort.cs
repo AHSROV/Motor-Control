@@ -120,7 +120,14 @@ namespace motor_control
             Console.WriteLine("Message received: " + lastCompleteString);
         }
 
+        public void SendString(String s)
+        {
+            String command = "." + s + "*";
+            base.SendString(command);
+        }
+
     }
+
 
     public delegate void MyEventHandler(object source, MyEventArgs e);
 

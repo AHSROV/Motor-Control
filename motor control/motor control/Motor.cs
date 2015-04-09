@@ -70,9 +70,11 @@ namespace motor_control
                 direction = 'r';
             }
 
-            String msg = String.Format("m{0}{1}{2}", deviceNumber, direction, Math.Abs(percentSpeed));
+            String percentSpeedFormatted = Math.Abs(percentSpeed).ToString("000");
+
+            String msg = String.Format("m{0}{1}{2}", deviceNumber, direction, percentSpeedFormatted);
             Console.WriteLine(msg);
-            port.SendStringln(msg);
+            port.SendString(msg);
         }
     }
 }
