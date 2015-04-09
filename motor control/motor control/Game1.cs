@@ -216,7 +216,7 @@ namespace motor_control
 
             // set up for 2014 (incomplete) motor config
 
-            SerialCoordinator coordinator = new SerialCoordinator(6000, 6);
+            SerialCoordinator coordinator = new SerialCoordinator(3000, 6);
 
             upFront.SetUp    (arduino, 5, coordinator);
             upBack.SetUp     (arduino, 4, coordinator);
