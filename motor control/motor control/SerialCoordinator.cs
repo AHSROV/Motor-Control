@@ -13,7 +13,8 @@ namespace motor_control
     {
         int interval;
         int total;
-        Dictionary<int, SendCommand> map;
+        Dictionary<int, int> offsetMap;
+        Dictionary<int, SendCommand> delegateMap;
 
         Timer timer;
 
@@ -28,13 +29,15 @@ namespace motor_control
             timer.AutoReset = true;
             timer.Elapsed += new ElapsedEventHandler(Run);
 
-            map = new Dictionary<int,SendCommand>();
+            offsetMap = new Dictionary<int, int>();
+            delegateMap = new Dictionary<int, SendCommand>();
         }
 
         public void SetUpMotor(int motorNumber, SendCommand commandDelegate)
         {
-            int motorOffset = (interval / total) * motorNumber;
-            map.Add(motorOffset, commandDelegate);
+            int motorOffset = (interval / total) * (motorNumber+1);
+            offsetMap.Add(motorNumber, motorOffset);
+            delegateMap.Add(motorNumber, commandDelegate);
         }
 
         public void Start()
@@ -44,11 +47,21 @@ namespace motor_control
 
         public void Run(Object source, ElapsedEventArgs e)
         {
-            foreach (KeyValuePair<int, SendCommand> entry in map)
+            foreach (KeyValuePair<int, int> entry in offsetMap)
             {
-                SendCommand command = (SendCommand)entry.Value;
-                command();
+                SendCommand command;
+                delegateMap.TryGetValue(entry.Key, out command);
+
+                Timer individualTimer = new Timer(entry.Value);
+                individualTimer.AutoReset = false;
+                individualTimer.Elapsed += new ElapsedEventHandler((sender, d) => SendIndividualCommand(sender, d, command));
+                individualTimer.Start();
             }
+        }
+
+        private void SendIndividualCommand(object sender, ElapsedEventArgs e, SendCommand sendCommand)
+        {
+            sendCommand();
         }
     }
 }

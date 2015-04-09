@@ -189,7 +189,7 @@ namespace motor_control
             set3 = new Xcontrols();
             set4 = new DownXControls();
             set5 = new BackXControls();
-
+             
             currentControls = set3;
 
             #region Chris: make a new comChanel and motors
@@ -216,7 +216,7 @@ namespace motor_control
 
             // set up for 2014 (incomplete) motor config
 
-            SerialCoordinator coordinator = new SerialCoordinator(500, 6);
+            SerialCoordinator coordinator = new SerialCoordinator(6000, 6);
 
             upFront.SetUp    (arduino, 5, coordinator);
             upBack.SetUp     (arduino, 4, coordinator);
