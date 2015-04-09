@@ -116,6 +116,7 @@
     <Compile Include="BarGraph\BarGraph.cs" />
     <Compile Include="BarGraph\BarGraph_UpDown.cs" />
     <Compile Include="ChrisControls.cs" />
+    <Compile Include="SerialCoordinator.cs" />
     <Compile Include="ConductivitySensor.cs" />
     <Compile Include="DownXControls.cs" />
     <Compile Include="EthernetComChannel.cs" />

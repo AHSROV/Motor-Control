@@ -216,19 +216,22 @@ namespace motor_control
 
             // set up for 2014 (incomplete) motor config
 
-            upFront.SetUp    (arduino, 5);
-            upBack.SetUp     (arduino, 4);
-            frontLeft.SetUp  (arduino, 0);
-            frontRight.SetUp (arduino, 1);
-            backLeft.SetUp   (arduino, 2);
-            backRight.SetUp  (arduino, 3);
+            SerialCoordinator coordinator = new SerialCoordinator(500, 6);
+
+            upFront.SetUp    (arduino, 5, coordinator);
+            upBack.SetUp     (arduino, 4, coordinator);
+            frontLeft.SetUp  (arduino, 0, coordinator);
+            frontRight.SetUp (arduino, 1, coordinator);
+            backLeft.SetUp   (arduino, 2, coordinator);
+            backRight.SetUp  (arduino, 3, coordinator);
 
             leech.SetUp  (arduino, 3);
             stomper.SetUp(arduino, 1);
             claw.SetUp   (arduino, 0);
             rack.SetUp   (arduino, 2);
             laser.SetUp  (arduino, 4);
-            
+
+            coordinator.Start();
             base.Initialize();
         }
 
@@ -480,7 +483,6 @@ namespace motor_control
             }
 
             //control what control mode we are using depending on the camara in use
-            
             desiredSpeeds = currentControls.Update(padState, lastPadState, keyState, lastKeyState, gameTime, desiredSpeeds);
 
             if (travelMode == false)

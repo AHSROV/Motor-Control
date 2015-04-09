@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Diagnostics;
 //percent of power being used by motor = motor speed
 namespace motor_control
 {
@@ -15,10 +16,12 @@ namespace motor_control
 
         //start up
         //make the object usalble by the main program
-        public void SetUp(ArduinoPort thePort, int motorID)
+        public void SetUp(ArduinoPort thePort, int motorID, SerialCoordinator coordinator)
         {
             deviceNumber = motorID;
             port = thePort;
+
+            coordinator.SetUpMotor(motorID, new SendCommand(PushMotorCommand));
         }
 
         char direction;
@@ -49,17 +52,11 @@ namespace motor_control
         //set speed 
         public void SetPercentSpeed(float desiredSpeed)// percent of possible speed between -1 and 1
         {
-            int newPercentSpeed = (int) (desiredSpeed * 100);
+            percentSpeed = (int) (desiredSpeed * 100);
+        }
 
-            // don't send command if nothing has changed
-            if (percentSpeed == newPercentSpeed)
-            {
-                return;
-            }
-
-            //store the information
-            percentSpeed = newPercentSpeed;
-
+        public void PushMotorCommand()
+        {
             //decide if the motor is going forward or backwards
             if (percentSpeed >= 0)
             {
@@ -73,7 +70,6 @@ namespace motor_control
             String percentSpeedFormatted = Math.Abs(percentSpeed).ToString("000");
 
             String msg = String.Format("m{0}{1}{2}", deviceNumber, direction, percentSpeedFormatted);
-            Console.WriteLine(msg);
             port.SendString(msg);
         }
     }

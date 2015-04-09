@@ -123,6 +123,7 @@ namespace motor_control
         public void SendString(String s)
         {
             String command = "." + s + "*";
+            Console.WriteLine(command);
             base.SendString(command);
         }
 
