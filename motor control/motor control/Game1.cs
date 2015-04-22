@@ -91,6 +91,8 @@ namespace motor_control
         IControls set5;
         IControls currentControls;
 
+        float motorPercentage = 1.0F;
+
         Stopwatch timeoutStopwatch;
 
         bool testingMode;
@@ -318,8 +320,7 @@ namespace motor_control
             #region Chris:Allows the game to exit
 
             // Allows the game to exit
-            if ((padState.Buttons.Back == ButtonState.Pressed) ||
-                (keyState.IsKeyDown(Keys.Escape)))
+            if (keyState.IsKeyDown(Keys.Escape))
             {
                 frontLeft.ShutDown();
                 frontRight.ShutDown();
@@ -453,46 +454,44 @@ namespace motor_control
             {
                 travelMode = false;
             }
+            if (lastPadState.Buttons.Start != padState.Buttons.Start)
+            {
+                if (padState.Buttons.Start == ButtonState.Pressed)
+                    currentControls = set5;
+            }
+            if (lastPadState.Buttons.Back != padState.Buttons.Back)
+            {
+                if (padState.Buttons.Back == ButtonState.Pressed)
+                    currentControls = set3;
+            }
             if (lastPadState.Buttons.LeftShoulder != padState.Buttons.LeftShoulder)
             {
-                if(padState.Buttons.LeftShoulder == ButtonState.Pressed)
-                   videoCameras.Previous();
+                if (padState.Buttons.LeftShoulder == ButtonState.Pressed)
+                    if(!(motorPercentage <= .1))
+                       motorPercentage -= 0.1F;
             }
             if (lastPadState.Buttons.RightShoulder != padState.Buttons.RightShoulder)
             {
                 if (padState.Buttons.RightShoulder == ButtonState.Pressed)
-                  videoCameras.Next();
-            }
-            #endregion
-
-            if (currentControls == set3 || currentControls == set4 || currentControls == set5)
-            {
-                switch (videoCameras.GetCurrentCamera())
                 {
-                    case 2: // Down Camera
-                        currentControls = set4;
-                        break;
-                    case 3: // back camera
-                    case 4: //Stomp camera
-                        currentControls = set5;
-                        break;
-                    default:
-                        currentControls = set3;
-                        break;
+                    if (!(motorPercentage >= 1))
+                        motorPercentage += 0.1F;
                 }
             }
+
+            #endregion
 
             //control what control mode we are using depending on the camara in use
             desiredSpeeds = currentControls.Update(padState, lastPadState, keyState, lastKeyState, gameTime, desiredSpeeds);
 
             if (travelMode == false)
             {
-                desiredSpeeds.frontLeft  *= 0.8F;
-                desiredSpeeds.frontRight *= 0.8F;
-                desiredSpeeds.upFront    *= 0.8F;
-                desiredSpeeds.upBack     *= 0.8F;
-                desiredSpeeds.backRight  *= 0.8F;
-                desiredSpeeds.backLeft   *= 0.8F;
+                desiredSpeeds.frontLeft  *= 0.8F * motorPercentage;
+                desiredSpeeds.frontRight *= 0.8F * motorPercentage;
+                desiredSpeeds.upFront *= 0.8F * motorPercentage;
+                desiredSpeeds.upBack *= 0.8F * motorPercentage;
+                desiredSpeeds.backRight *= 0.8F * motorPercentage;
+                desiredSpeeds.backLeft *= 0.8F * motorPercentage;
             }
 
             //set the motor speed equal to the y value
@@ -692,7 +691,7 @@ namespace motor_control
                 travelText = "Fast";
             }
 
-            message = String.Format("Control set {0} ({1})", currentControls.GetName(), travelText);
+            message = String.Format("Control set {0} ({1}) at {2}% power", currentControls.GetName(), travelText, motorPercentage*100);
             spriteBatch.DrawString(mainFont, message, textPosition, Color.Black);
             textPosition.Y += 25;
 
